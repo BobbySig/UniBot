@@ -2,7 +2,7 @@
 
 require('dotenv').load();
 const Discord = require('discord.js');
-const SpoilerBot = require('discord-spoilerbot');
+const SpoilerBot = require('@bobbysig/spoilerbot');
 
 /* --- Launch SpoilerBot --- */
 var client = new Discord.Client();
