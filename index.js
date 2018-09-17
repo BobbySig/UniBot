@@ -1,8 +1,12 @@
 'use strict';
 
-require('dotenv').load();
 const Discord = require('discord.js');
 const SpoilerBot = require('@bobbysig/spoilerbot');
+
+/* --- Load dotenv --- */
+if (process.env.NODE_ENV !== "production") {
+  require('dotenv').load();
+}
 
 /* --- Launch SpoilerBot --- */
 var client = new Discord.Client();
