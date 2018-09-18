@@ -74,3 +74,6 @@ typings/
 
 # Ignore dev environment variable file
 .env
+
+# Ignore Visual Studio files
+.vs/*
