@@ -1,6 +1,6 @@
 {
   "name": "unibot",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A server that runs Discord bots.",
   "main": "index.js",
   "scripts": {
