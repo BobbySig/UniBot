@@ -30,30 +30,23 @@ http.createServer(function (req, res) {
 function status() {
   let status = {};
   status.UniBot = "ONLINE";
-  status = discordClientStatus(status, spoilerbot.client);
+  status.SpoilerBot = discordClientStatus(spoilerbot.client);
   return status;
 }
 
-function discordClientStatus(status, client) {
+function discordClientStatus(client) {
   switch(client.status) {
     case Discord.Constants.Status.READY:
-      status.SpoilerBot = "READY"
-      break;
+      return "READY";
     case Discord.Constants.Status.CONNECTING:
-      status.SpoilerBot = "CONNECTING"
-      break;
+      return "CONNECTING";
     case Discord.Constants.Status.RECONNECTING:
-      status.SpoilerBot = "RECONNECTING"
-      break;
+      return "RECONNECTING";
     case Discord.Constants.Status.IDLE:
-      status.SpoilerBot = "IDLE"
-      break;
+      return "IDLE";
     case Discord.Constants.Status.NEARLY:
-      status.SpoilerBot = "NEARLY"
-      break;
+      return "NEARLY";
     case Discord.Constants.Status.DISCONNECTED:
-      status.SpoilerBot = "DISCONNECTED"
-      break;
+      return "DISCONNECTED";
   }
-  return status;
 }
