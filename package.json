@@ -10,7 +10,7 @@
   "author": "Bobby Signor",
   "license": "MIT",
   "dependencies": {
-    "@bobbysig/spoilerbot": "^1.0.0",
+    "@bobbysig/spoilerbot": "^1.0.1",
     "discord.js": "^11.4.2"
   },
   "devDependencies": {
