@@ -9,16 +9,6 @@ if (process.env.NODE_ENV !== "production") {
   require('dotenv').load();
 }
 
-/* --- Launch SpoilerBot --- */
-var spoilerbot = new SpoilerBot(new Discord.Client());
-spoilerbot.client.on("ready", function() {
-  console.log("SpoilerBot online.");
-});
-spoilerbot.client.login(process.env.SPOILERBOT_SECRET).catch(function(reason) {
-  console.error('Error: Discord login failed. Log:');
-  console.error(reason);
-});
-
 /* --- Web server that returns status --- */
 http.createServer(function (req, res) {
   res.setHeader('Content-Type', 'application/json');
@@ -30,7 +20,6 @@ http.createServer(function (req, res) {
 function status() {
   let status = {};
   status.UniBot = "ONLINE";
-  status.SpoilerBot = discordClientStatus(spoilerbot.client);
   return status;
 }
 
